@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- CONFIGURACIÓN BÁSICA: Define el idioma del sitio, codificación de texto y ajuste de pantalla para móviles -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SEO Y PESTAÑA: Título y descripción de la página de servicios que leerán los motores de búsqueda (ej. Google) -->
+<title>Servicios y precios — Veterinaria San Marcos</title>
+<meta name="description" content="Catálogo de servicios de Veterinaria San Marcos: consultas, vacunación, cirugía, desparasitación, exámenes y otros servicios con precios.">
+
+<!-- HOJA DE ESTILOS: Archivo CSS que da color, tipografía y estructura visual a esta página -->
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ==========================================
+     ENCABEZADO (HEADER) Y NAVEGACIÓN
+     ========================================== -->
+<header class="site-header">
+  <nav class="nav-bar" aria-label="Navegación principal">
+    
+    <!-- LOGO DE LA MARCA: Ícono vectorizado (SVG) y nombre de la clínica enlazado al inicio -->
+    <a class="brand" href="index.html">
+      <svg class="brand-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="20" cy="20" r="19" stroke="#2f5d50" stroke-width="2"/>
+        <path d="M13 17c1.4 0 2.5-1.5 2.5-3.3S14.4 10.4 13 10.4s-2.5 1.5-2.5 3.3S11.6 17 13 17z" fill="#2f5d50"/>
+        <path d="M27 17c1.4 0 2.5-1.5 2.5-3.3S28.4 10.4 27 10.4s-2.5 1.5-2.5 3.3S25.6 17 27 17z" fill="#2f5d50"/>
+        <path d="M16.3 21.3c1.2-1 2.6-1.6 3.7-1.6s2.5.6 3.7 1.6c1.6 1.3 3.5 2.2 3.5 4.7 0 2.2-1.7 3.6-3.6 3.6-1.1 0-1.9-.4-2.9-.9-.3-.15-.7-.15-1 0-1 .5-1.8.9-2.9.9-1.9 0-3.6-1.4-3.6-3.6 0-2.5 1.9-3.4 3.5-4.7z" fill="#2f5d50"/>
+      </svg>
+      Veterinaria San Marcos
+    </a>
+    
+    <!-- BOTÓN MENÚ MÓVIL: Despliega los enlaces en pantallas pequeñas -->
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menú de navegación"></button>
+    
+    <!-- ENLACES DEL MENÚ: Lista de páginas. "Servicios" tiene aria-current="page" para resaltar que es la página activa -->
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="servicios.html" aria-current="page">Servicios</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a class="nav-cta" href="citas.html">Solicitar cita</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ==========================================
+     CONTENIDO PRINCIPAL (MAIN)
+     ========================================== -->
+<main id="contenido">
+
+  <section class="section" style="padding-top:3rem;">
+    <div class="container">
+      
+      <!-- ENCABEZADO DE SECCIÓN: Título principal y texto aclaratorio sobre precios y tiempos -->
+      <div class="section-head">
+        <p class="eyebrow">Catálogo</p>
+        <h1 class="mt-0">Servicios y precios</h1>
+        <p>Valores referenciales en pesos chilenos (CLP). Los tiempos son aproximados y pueden variar según el estado de la mascota.</p>
+      </div>
+
+      <!-- BARRA DE FILTROS: Botones que JavaScript usará para mostrar u ocultar servicios según su categoría -->
+      <div class="filter-bar" role="group" aria-label="Filtrar servicios por categoría">
+        <button class="filter-btn" data-filter="todos" aria-pressed="true">Todos</button>
+        <button class="filter-btn" data-filter="Consultas" aria-pressed="false">Consultas</button>
+        <button class="filter-btn" data-filter="Vacunación" aria-pressed="false">Vacunación</button>
+        <button class="filter-btn" data-filter="Cirugía" aria-pressed="false">Cirugía</button>
+        <button class="filter-btn" data-filter="Desparasitación" aria-pressed="false">Desparasitación</button>
+        <button class="filter-btn" data-filter="Exámenes" aria-pressed="false">Exámenes</button>
+        <button class="filter-btn" data-filter="Otros" aria-pressed="false">Otros</button>
+      </div>
+
+      <!-- GRILLA DE SERVICIOS: Contenedor principal que alinea las tarjetas de cada servicio -->
+      <div class="service-grid">
+
+        <!-- CATEGORÍA: CONSULTAS -->
+        <!-- Cada artículo (tarjeta) tiene un atributo 'data-category' que lo vincula con los botones de filtro de arriba -->
+        <article class="service-card" data-category="Consultas">
+          <span class="cat">Consultas</span>
+          <h3>Consulta general</h3>
+          <p class="meta">Perro / Gato · 30 min</p>
+          <span class="price">$15.000</span>
+        </article>
+        <article class="service-card" data-category="Consultas">
+          <span class="cat">Consultas</span>
+          <h3>Consulta de urgencia</h3>
+          <p class="meta">Perro / Gato · 30 min · Fuera de horario +$10.000</p>
+          <span class="price">$25.000</span>
+        </article>
+        <article class="service-card" data-category="Consultas">
+          <span class="cat">Consultas</span>
+          <h3>Control postoperatorio</h3>
+          <p class="meta">Perro / Gato · 20 min</p>
+          <span class="price">$10.000</span>
+        </article>
+        <article class="service-card" data-category="Consultas">
+          <span class="cat">Consultas</span>
+          <h3>Consulta ave / conejo</h3>
+          <p class="meta">Ave / Conejo · 30 min</p>
+          <span class="price">$18.000</span>
+        </article>
+        <article class="service-card" data-category="Consultas">
+          <span class="cat">Consultas</span>
+          <h3>Segunda opinión médica</h3>
+          <p class="meta">Todas las especies · 40 min · Requiere ficha previa</p>
+          <span class="price">$20.000</span>
+        </article>
+
+        <!-- CATEGORÍA: VACUNACIÓN -->
+        <article class="service-card" data-category="Vacunación">
+          <span class="cat">Vacunación</span>
+          <h3>Vacuna antirrábica canina</h3>
+          <p class="meta">Perro · 10 min · Obligatoria por ley</p>
+          <span class="price">$12.000</span>
+        </article>
+        <article class="service-card" data-category="Vacunación">
+          <span class="cat">Vacunación</span>
+          <h3>Vacuna séxtuple canina</h3>
+          <p class="meta">Perro · 10 min · Refuerzo anual</p>
+          <span class="price">$18.000</span>
+        </article>
+        <article class="service-card" data-category="Vacunación">
+          <span class="cat">Vacunación</span>
+          <h3>Vacuna bivalente felina</h3>
+          <p class="meta">Gato · 10 min · Refuerzo anual</p>
+          <span class="price">$15.000</span>
+        </article>
+        <article class="service-card" data-category="Vacunación">
+          <span class="cat">Vacunación</span>
+          <h3>Vacuna triple felina</h3>
+          <p class="meta">Gato · 10 min · Refuerzo anual</p>
+          <span class="price">$17.000</span>
+        </article>
+        <article class="service-card" data-category="Vacunación">
+          <span class="cat">Vacunación</span>
+          <h3>Vacuna Bordetella canina</h3>
+          <p class="meta">Perro · 10 min · Tos de las perreras</p>
+          <span class="price">$14.000</span>
+        </article>
+        <article class="service-card" data-category="Vacunación">
+          <span class="cat">Vacunación</span>
+          <h3>Vacuna antirrábica felina</h3>
+          <p class="meta">Gato · 10 min</p>
+          <span class="price">$12.000</span>
+        </article>
+
+        <!-- CATEGORÍA: CIRUGÍA -->
+        <article class="service-card" data-category="Cirugía">
+          <span class="cat">Cirugía</span>
+          <h3>Esterilización hembra canina</h3>
+          <p class="meta">Perra · 90 min · Incluye anestesia y hospitalización 24 h</p>
+          <span class="price">$80.000</span>
+        </article>
+        <article class="service-card" data-category="Cirugía">
+          <span class="cat">Cirugía</span>
+          <h3>Esterilización macho canino</h3>
+          <p class="meta">Perro · 60 min · Incluye anestesia</p>
+          <span class="price">$60.000</span>
+        </article>
+        <article class="service-card" data-category="Cirugía">
+          <span class="cat">Cirugía</span>
+          <h3>Esterilización hembra felina</h3>
+          <p class="meta">Gata · 60 min · Incluye anestesia y hospitalización 12 h</p>
+          <span class="price">$65.000</span>
+        </article>
+        <article class="service-card" data-category="Cirugía">
+          <span class="cat">Cirugía</span>
+          <h3>Esterilización macho felino</h3>
+          <p class="meta">Gato · 45 min · Incluye anestesia</p>
+          <span class="price">$50.000</span>
+        </article>
+        <article class="service-card" data-category="Cirugía">
+          <span class="cat">Cirugía</span>
+          <h3>Extirpación de tumor cutáneo</h3>
+          <p class="meta">Perro / Gato · 60 min · Precio referencial, varía según tamaño</p>
+          <span class="price">$120.000</span>
+        </article>
+        <article class="service-card" data-category="Cirugía">
+          <span class="cat">Cirugía</span>
+          <h3>Cesárea de urgencia</h3>
+          <p class="meta">Perra / Gata · 120 min</p>
+          <span class="price">$180.000</span>
+        </article>
+
+        <!-- CATEGORÍA: DESPARASITACIÓN -->
+        <article class="service-card" data-category="Desparasitación">
+          <span class="cat">Desparasitación</span>
+          <h3>Interna, pequeños (&lt;10 kg)</h3>
+          <p class="meta">Perro · 5 min</p>
+          <span class="price">$8.000</span>
+        </article>
+        <article class="service-card" data-category="Desparasitación">
+          <span class="cat">Desparasitación</span>
+          <h3>Interna, medianos (10–25 kg)</h3>
+          <p class="meta">Perro · 5 min</p>
+          <span class="price">$9.500</span>
+        </article>
+        <article class="service-card" data-category="Desparasitación">
+          <span class="cat">Desparasitación</span>
+          <h3>Interna, grandes (&gt;25 kg)</h3>
+          <p class="meta">Perro · 5 min</p>
+          <span class="price">$11.000</span>
+        </article>
+        <article class="service-card" data-category="Desparasitación">
+          <span class="cat">Desparasitación</span>
+          <h3>Interna felina</h3>
+          <p class="meta">Gato · 5 min</p>
+          <span class="price">$8.000</span>
+        </article>
+        <article class="service-card" data-category="Desparasitación">
+          <span class="cat">Desparasitación</span>
+          <h3>Antiparasitario externo (pipeta)</h3>
+          <p class="meta">Perro / Gato · 5 min · Incluye aplicación</p>
+          <span class="price">$7.500</span>
+        </article>
+
+        <!-- CATEGORÍA: EXÁMENES -->
+        <article class="service-card" data-category="Exámenes">
+          <span class="cat">Exámenes</span>
+          <h3>Hemograma completo</h3>
+          <p class="meta">Perro / Gato · 30 min · Resultado en 24–48 h</p>
+          <span class="price">$22.000</span>
+        </article>
+        <article class="service-card" data-category="Exámenes">
+          <span class="cat">Exámenes</span>
+          <h3>Perfil bioquímico completo</h3>
+          <p class="meta">Perro / Gato · 30 min · Resultado en 24–48 h</p>
+          <span class="price">$35.000</span>
+        </article>
+        <article class="service-card" data-category="Exámenes">
+          <span class="cat">Exámenes</span>
+          <h3>Radiografía (1 proyección)</h3>
+          <p class="meta">Perro / Gato · 20 min</p>
+          <span class="price">$28.000</span>
+        </article>
+        <article class="service-card" data-category="Exámenes">
+          <span class="cat">Exámenes</span>
+          <h3>Ecografía abdominal</h3>
+          <p class="meta">Perro / Gato · 30 min</p>
+          <span class="price">$45.000</span>
+        </article>
+        <article class="service-card" data-category="Exámenes">
+          <span class="cat">Exámenes</span>
+          <h3>Test de leishmaniasis</h3>
+          <p class="meta">Perro · 20 min</p>
+          <span class="price">$18.000</span>
+        </article>
+
+        <!-- CATEGORÍA: OTROS -->
+        <article class="service-card" data-category="Otros">
+          <span class="cat">Otros</span>
+          <h3>Corte de uñas</h3>
+          <p class="meta">Perro / Gato · 15 min</p>
+          <span class="price">$5.000</span>
+        </article>
+        <article class="service-card" data-category="Otros">
+          <span class="cat">Otros</span>
+          <h3>Limpieza dental</h3>
+          <p class="meta">Perro / Gato · 45 min · Requiere anestesia</p>
+          <span class="price">$55.000</span>
+        </article>
+        <article class="service-card" data-category="Otros">
+          <span class="cat">Otros</span>
+          <h3>Microchip de identificación</h3>
+          <p class="meta">Perro / Gato · 10 min · Incluye registro</p>
+          <span class="price">$15.000</span>
+        </article>
+        <article class="service-card" data-category="Otros">
+          <span class="cat">Otros</span>
+          <h3>Hospitalización (por día)</h3>
+          <p class="meta">Perro / Gato · 24 h · Incluye monitoreo y alimentación básica</p>
+          <span class="price">$30.000</span>
+        </article>
+
+      </div>
+
+      <!-- BOTÓN DE ACCIÓN FINAL (CTA): Deriva al usuario al formulario de solicitud de horas -->
+      <div class="text-center" style="margin-top:2.5rem;">
+        <a class="btn btn-primary" href="citas.html">Solicitar hora para uno de estos servicios</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ==========================================
+     PIE DE PÁGINA (FOOTER)
+     ========================================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <!-- Datos de la clínica -->
+      <div>
+        <h4>Veterinaria San Marcos</h4>
+        <p>Clínica veterinaria fundada en 2009, atendiendo perros, gatos, aves y conejos en Rancagua, Región del Libertador General Bernardo O'Higgins.</p>
+      </div>
+      <!-- Accesos directos -->
+      <div>
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <!-- Horario comercial -->
+      <div>
+        <h4>Atención</h4>
+        <ul>
+          <li>Lun a vie: 09:00–19:00</li>
+          <li>Sábado: 09:00–14:00</li>
+          <li>Urgencias: +56 9 5555 5555</li>
+        </ul>
+      </div>
+      <!-- Datos de contacto -->
+      <div>
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="mailto:contacto@vetsanmarcos.cl">contacto@vetsanmarcos.cl</a></li>
+          <li><a href="tel:+56721234567">+56 72 123 4567</a></li>
+          <li>Av. Principal 456, Rancagua</li>
+        </ul>
+      </div>
+    </div>
+    <!-- Legales -->
+    <div class="footer-bottom">
+      <span>© 2026 Veterinaria San Marcos. Todos los derechos reservados.</span>
+      <span>Proyecto académico DSY1104 — Desarrollo FullStack II, Duoc UC</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ==========================================
+     ELEMENTOS FLOTANTES Y SCRIPTS
+     ========================================== -->
+<!-- Botón para regresar al techo de la página web -->
+<button class="to-top" aria-label="Volver arriba">↑</button>
+
+<!-- Archivo JavaScript para dotar de funcionamiento a los botones de filtro y el menú móvil -->
+<script src="js/validacion.js"></script>
+</body>
+</html>
