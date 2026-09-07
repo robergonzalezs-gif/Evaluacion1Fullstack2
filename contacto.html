@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- CONFIGURACIÓN DEL DOCUMENTO: Define la codificación de caracteres y la vista para dispositivos móviles -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- TÍTULO Y DESCRIPCIÓN: Información que leen los navegadores y motores de búsqueda (Google) -->
+<title>Contacto — Veterinaria San Marcos</title>
+<meta name="description" content="Contacta a Veterinaria San Marcos en Rancagua: dirección, teléfono, correo y formulario de contacto.">
+
+<!-- HOJA DE ESTILOS: Vincula este documento con el archivo CSS para darle diseño y colores -->
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ENCABEZADO (HEADER): Contiene el logotipo de la marca y la barra de navegación principal -->
+<header class="site-header">
+  <nav class="nav-bar" aria-label="Navegación principal">
+    
+    <!-- LOGO Y NOMBRE DE LA MARCA: El ícono está creado mediante código SVG -->
+    <a class="brand" href="index.html">
+      <svg class="brand-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="20" cy="20" r="19" stroke="#2f5d50" stroke-width="2"/>
+        <path d="M13 17c1.4 0 2.5-1.5 2.5-3.3S14.4 10.4 13 10.4s-2.5 1.5-2.5 3.3S11.6 17 13 17z" fill="#2f5d50"/>
+        <path d="M27 17c1.4 0 2.5-1.5 2.5-3.3S28.4 10.4 27 10.4s-2.5 1.5-2.5 3.3S25.6 17 27 17z" fill="#2f5d50"/>
+        <path d="M16.3 21.3c1.2-1 2.6-1.6 3.7-1.6s2.5.6 3.7 1.6c1.6 1.3 3.5 2.2 3.5 4.7 0 2.2-1.7 3.6-3.6 3.6-1.1 0-1.9-.4-2.9-.9-.3-.15-.7-.15-1 0-1 .5-1.8.9-2.9.9-1.9 0-3.6-1.4-3.6-3.6 0-2.5 1.9-3.4 3.5-4.7z" fill="#2f5d50"/>
+      </svg>
+      Veterinaria San Marcos
+    </a>
+    
+    <!-- BOTÓN DE MENÚ MÓVIL: Se activa en pantallas pequeñas (celulares) -->
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menú de navegación"></button>
+    
+    <!-- ENLACES DE NAVEGACIÓN: Lista de páginas. "Contacto" tiene la etiqueta aria-current="page" porque es la página actual -->
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+      <li><a class="nav-cta" href="citas.html">Solicitar cita</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- CONTENIDO PRINCIPAL (MAIN): Aquí va el formulario de contacto y el mapa -->
+<main id="contenido">
+  <section class="section" style="padding-top:3rem;">
+    <div class="container">
+      
+      <!-- INTRODUCCIÓN DE LA SECCIÓN: Título y breve explicación del propósito de esta página -->
+      <div class="section-head">
+        <p class="eyebrow">Contacto</p>
+        <h1 class="mt-0">Escríbenos o visítanos</h1>
+        <p>Para solicitar una hora usa el formulario de citas. Este canal es para consultas generales, reclamos o coordinación con el equipo administrativo.</p>
+      </div>
+
+      <!-- DISTRIBUCIÓN EN COLUMNAS (GRID): Divide visualmente la pantalla entre el formulario y el mapa/dirección -->
+      <div class="hero-grid" style="align-items:flex-start;">
+
+        <!-- SECTOR 1: FORMULARIO DE CONTACTO -->
+        <div class="form-card">
+          <form id="form-contacto" novalidate>
+            <!-- CONTENEDOR DE ESTADO: Aquí JavaScript mostrará los mensajes de éxito o error al enviar -->
+            <div id="form-contacto-status" class="form-status" role="status" aria-live="polite"></div>
+
+            <div class="form-grid" style="margin-top:1.25rem;">
+              
+              <!-- CAMPOS PERSONALES: Nombre, correo y teléfono -->
+              <div class="field full">
+                <label for="c-nombre">Nombre completo</label>
+                <input type="text" id="c-nombre" name="c-nombre" autocomplete="name" data-rules="required,minLength:3" aria-describedby="c-nombre-error">
+                <span class="error-msg" id="c-nombre-error"></span>
+              </div>
+
+              <div class="field">
+                <label for="c-correo">Correo electrónico</label>
+                <input type="email" id="c-correo" name="c-correo" autocomplete="email" data-rules="required,email" aria-describedby="c-correo-error">
+                <span class="error-msg" id="c-correo-error"></span>
+              </div>
+
+              <div class="field">
+                <label for="c-telefono">Teléfono (opcional)</label>
+                <input type="tel" id="c-telefono" name="c-telefono" placeholder="+56 9 1234 5678" autocomplete="tel">
+              </div>
+
+              <!-- CAMPO DE ASUNTO CON LISTA DE SUGERENCIAS -->
+              <div class="field full">
+                <label for="c-asunto">Asunto</label>
+                <input type="text" id="c-asunto" name="c-asunto" list="sugerencias-asunto" data-rules="required" aria-describedby="c-asunto-error">
+                
+                <!-- DATALIST: Despliega un menú con sugerencias predefinidas cuando el usuario hace clic en el input -->
+                <datalist id="sugerencias-asunto">
+                  <option value="Consulta por horario de atención"></option>
+                  <option value="Reclamo sobre una atención"></option>
+                  <option value="Solicitud de historial clínico"></option>
+                  <option value="Consulta por convenio o boleta"></option>
+                </datalist>
+                <span class="error-msg" id="c-asunto-error"></span>
+              </div>
+
+              <!-- CAMPO DE MENSAJE: Un textarea para escribir textos más largos -->
+              <div class="field full">
+                <label for="c-mensaje">Mensaje</label>
+                <textarea id="c-mensaje" name="c-mensaje" rows="5" data-rules="required,minLength:15" aria-describedby="c-mensaje-error"></textarea>
+                <span class="error-msg" id="c-mensaje-error"></span>
+              </div>
+
+              <!-- BOTONES DEL FORMULARIO: Enviar datos o limpiar el formulario -->
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+                <button type="reset" class="btn btn-outline">Limpiar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- SECTOR 2: INFORMACIÓN DE UBICACIÓN Y MAPA -->
+        <div>
+          <h3>Dirección y horario</h3>
+          <p>Av. Principal 456, Rancagua, Región del Libertador General Bernardo O'Higgins.</p>
+          <p>Lunes a viernes: 09:00–19:00 · Sábado: 09:00–14:00</p>
+          <p>Teléfono: <a href="tel:+56721234567">+56 72 123 4567</a> · Urgencias: <a href="tel:+56955555555">+56 9 5555 5555</a></p>
+          
+          <!-- MAPA DE GOOGLE INCRUSTADO: La etiqueta iframe permite cargar un sitio web (el mapa de Google) dentro de esta página -->
+          <div class="map-frame">
+            <iframe
+              title="Ubicación de Veterinaria San Marcos en Rancagua"
+              src="https://www.google.com/maps?q=Rancagua,Chile&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- PIE DE PÁGINA (FOOTER): Organizado en 4 columnas con información repetitiva útil y créditos -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <!-- COLUMNA 1: Sobre la clínica -->
+      <div>
+        <h4>Veterinaria San Marcos</h4>
+        <p>Clínica veterinaria fundada en 2009, atendiendo perros, gatos, aves y conejos en Rancagua, Región del Libertador General Bernardo O'Higgins.</p>
+      </div>
+      <!-- COLUMNA 2: Accesos rápidos -->
+      <div>
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <!-- COLUMNA 3: Horarios -->
+      <div>
+        <h4>Atención</h4>
+        <ul>
+          <li>Lun a vie: 09:00–19:00</li>
+          <li>Sábado: 09:00–14:00</li>
+          <li>Urgencias: +56 9 5555 5555</li>
+        </ul>
+      </div>
+      <!-- COLUMNA 4: Formas de contacto -->
+      <div>
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="mailto:contacto@vetsanmarcos.cl">contacto@vetsanmarcos.cl</a></li>
+          <li><a href="tel:+56721234567">+56 72 123 4567</a></li>
+          <li>Av. Principal 456, Rancagua</li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- COPYRIGHT: Textos legales y académicos -->
+    <div class="footer-bottom">
+      <span>© 2026 Veterinaria San Marcos. Todos los derechos reservados.</span>
+      <span>Proyecto académico DSY1104 — Desarrollo FullStack II, Duoc UC</span>
+    </div>
+  </div>
+</footer>
+
+<!-- BOTÓN FLOTANTE: Permite al usuario regresar rápido al inicio de la página -->
+<button class="to-top" aria-label="Volver arriba">↑</button>
+
+<!-- SCRIPTS (JS): Carga el código JavaScript encargado de que el formulario funcione y valide los datos -->
+<script src="js/validacion.js"></script>
+</body>
+</html>
