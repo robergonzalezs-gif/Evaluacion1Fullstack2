@@ -1,0 +1,36 @@
+﻿ENTREGA PARA EL PROFESOR - SAN MARCOS Y DINOBOX
+
+ARCHIVOS PARA SUBIR
+Comprimidos/Frontend-SanMarcos.zip: código y pruebas React.
+Comprimidos/Backend-SanMarcos.zip: código Spring Boot, pruebas, SQL y Docker autónomo.
+Documentacion/01-ERS.pdf: requisitos de la versión integrada.
+Documentacion/02-Manual-de-usuario.pdf: instrucciones y capturas comentadas.
+Documentacion/03-APIs-e-integracion.pdf: arquitectura, modelo y comunicación REST.
+Documentacion/04-Documentacion-APIs.xlsx y .pdf: inventario de 31 operaciones.
+Documentacion/openapi.json: contrato Swagger exportado.
+Documentacion/05-Guion-presentacion.pdf: recorrido de 15 minutos más preguntas.
+Video/dinobox.mp4: video actualizado de 60 segundos, capturas y subtítulos, sin voz.
+Evidencias/: capturas, resultados HTTP y pruebas.
+
+EJECUTAR EL SISTEMA COMPLETO
+Proyecto contiene frontend, backend, SQL, Docker, Compose y el JAR con React integrado.
+Abra PowerShell en Proyecto y ejecute:
+powershell -ExecutionPolicy Bypass -File .\Iniciar-Entrega.ps1
+Requiere Docker Desktop activo, contenedores Linux e Internet para las imágenes.
+Lea Proyecto/README.txt para alternativas y configuración.
+
+ANTES DE ENVIAR
+1. Completar los enlaces públicos reales de frontend y backend en ENLACES-ENTREGA.txt.
+2. Completar DATOS-ACADEMICOS.txt con integrantes, sección y docente.
+3. Revisar el manual: contiene capturas de vendedor, solicitud y seguimiento de Dinobox;
+   no incluye capturas de instalación, registro y compra paso a paso. Para ajustarse
+   íntegramente al ejemplo de manual del profesor, añadir esas capturas del entorno elegido.
+4. Encender Docker y comprobar el arranque en el equipo de presentación.
+5. Subir los archivos a AVA según las casillas y límite de tamaño del curso.
+No se ha enviado nada al profesor ni publicado repositorios.
+
+La Parcial 3 exige presentación de 15 minutos y 5 de preguntas.
+El video de un minuto corresponde a la Formativa 3 Dinobox; se incluye como complemento.
+Pruebas del 25-11-2026: 47 frontend y 17 backend correctas.
+Docker Desktop estaba apagado; no se afirma una prueba de arranque de contenedores.
+No se acredita aprobación del cliente ni historial colaborativo GitHub.

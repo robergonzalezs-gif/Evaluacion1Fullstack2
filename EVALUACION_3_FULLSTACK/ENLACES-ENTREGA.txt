@@ -1,0 +1,4 @@
+﻿Página: https://sanmarcos-34-227-71-217.sslip.io/
+Swagger: https://sanmarcos-34-227-71-217.sslip.io/swagger-ui/index.html
+GitHub frontend: PENDIENTE DE PUBLICAR/CONFIRMAR
+GitHub backend: PENDIENTE DE PUBLICAR/CONFIRMAR
