@@ -1,0 +1,62 @@
+[
+  {
+    "code": "ALI-001",
+    "name": "Alimento adulto para perro",
+    "description": "Nutrición completa para perros adultos de tamaño mediano.",
+    "category": "Alimentos",
+    "price": 18990,
+    "stock": 18,
+    "critical": 5,
+    "icon": "🥣"
+  },
+  {
+    "code": "ALI-002",
+    "name": "Alimento para gato esterilizado",
+    "description": "Fórmula equilibrada para el cuidado diario de gatos esterilizados.",
+    "category": "Alimentos",
+    "price": 15990,
+    "stock": 12,
+    "critical": 4,
+    "icon": "🐈"
+  },
+  {
+    "code": "SAL-001",
+    "name": "Antiparasitario externo",
+    "description": "Protección antiparasitaria. Consulta a tu veterinario por dosis y uso.",
+    "category": "Salud",
+    "price": 8990,
+    "stock": 8,
+    "critical": 3,
+    "icon": "🩺"
+  },
+  {
+    "code": "HIG-001",
+    "name": "Shampoo piel sensible",
+    "description": "Limpieza suave para el baño de tu mascota.",
+    "category": "Higiene",
+    "price": 6490,
+    "stock": 15,
+    "critical": 4,
+    "icon": "🧴"
+  },
+  {
+    "code": "ACC-001",
+    "name": "Correa paseo mediana",
+    "description": "Correa resistente para paseos cómodos y seguros.",
+    "category": "Accesorios",
+    "price": 7990,
+    "stock": 3,
+    "critical": 5,
+    "icon": "🦮"
+  },
+  {
+    "code": "JUG-001",
+    "name": "Juguete interactivo",
+    "description": "Estímulo para el juego y el enriquecimiento ambiental.",
+    "category": "Juguetes",
+    "price": 4990,
+    "stock": 22,
+    "critical": 6,
+    "icon": "🎾"
+  }
+]

@@ -1,0 +1,8 @@
+FROM eclipse-temurin:21-jre-jammy
+WORKDIR /app
+RUN groupadd --system vet && useradd --system --gid vet vet
+COPY --chown=vet:vet release/vet-api-3.0.0.jar app.jar
+USER vet
+ENV PORT=8080
+EXPOSE 8080
+ENTRYPOINT ["java", "-XX:MaxRAMPercentage=60.0", "-jar", "/app/app.jar"]
