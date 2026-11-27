@@ -1,0 +1,39 @@
+name: sanmarcos-entrega
+services:
+  mysql:
+    image: mysql:8.0
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: dinobox
+      MYSQL_USER: dinobox
+      MYSQL_PASSWORD: ${DB_PASSWORD:?Define DB_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:?Define MYSQL_ROOT_PASSWORD}
+    volumes:
+      - datos_entrega:/var/lib/mysql
+      - ./sql:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "--silent"]
+      interval: 5s
+      timeout: 5s
+      retries: 40
+  app:
+    build:
+      context: .
+      dockerfile: ${APP_DOCKERFILE:-deploy/Dockerfile.runtime}
+    restart: unless-stopped
+    depends_on:
+      mysql:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:8080:8080"
+    environment:
+      SPRING_PROFILES_ACTIVE: deploy
+      DB_URL: jdbc:mysql://mysql:3306/dinobox?allowPublicKeyRetrieval=true&useSSL=false
+      DB_USER: dinobox
+      DB_PASSWORD: ${DB_PASSWORD:?Define DB_PASSWORD}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:?Define ADMIN_PASSWORD}
+      JWT_SECRET: ${JWT_SECRET:?Define JWT_SECRET}
+      PUBLIC_ORIGIN: http://localhost:8080
+      AUTH_COOKIE_SECURE: "false"
+volumes:
+  datos_entrega:

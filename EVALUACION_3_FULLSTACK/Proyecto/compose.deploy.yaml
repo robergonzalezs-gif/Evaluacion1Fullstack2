@@ -1,0 +1,56 @@
+services:
+  mysql:
+    image: mysql:8.0
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: dinobox
+      MYSQL_USER: dinobox
+      MYSQL_PASSWORD: ${DB_PASSWORD:?Define DB_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:?Define MYSQL_ROOT_PASSWORD}
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "--silent"]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+    mem_limit: 1g
+  app:
+    image: vet-site:local
+    build:
+      context: .
+      dockerfile: ${APP_DOCKERFILE:-Dockerfile}
+    restart: unless-stopped
+    depends_on:
+      mysql:
+        condition: service_healthy
+    environment:
+      SPRING_PROFILES_ACTIVE: deploy
+      DB_URL: jdbc:mysql://mysql:3306/dinobox?allowPublicKeyRetrieval=true&useSSL=false
+      DB_USER: dinobox
+      DB_PASSWORD: ${DB_PASSWORD:?Define DB_PASSWORD}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:?Define ADMIN_PASSWORD}
+      JWT_SECRET: ${JWT_SECRET:?Define JWT_SECRET}
+      PUBLIC_ORIGIN: ${PUBLIC_ORIGIN:?Define PUBLIC_ORIGIN}
+      AUTH_COOKIE_SECURE: "true"
+    expose:
+      - "8080"
+    mem_limit: 1536m
+  web:
+    image: caddy:2
+    restart: unless-stopped
+    depends_on:
+      - app
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      SITE_ADDRESS: ${SITE_ADDRESS:?Define SITE_ADDRESS}
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+volumes:
+  mysql_data:
+  caddy_data:
+  caddy_config:
