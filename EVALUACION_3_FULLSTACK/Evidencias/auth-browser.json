@@ -1,0 +1,10 @@
+{
+  "registration": true,
+  "customerReload": true,
+  "httpOnlyCookie": true,
+  "logoutSurvivesReload": true,
+  "adminCreatesSeller": true,
+  "sellerPermissionsAndReload": true,
+  "roleChangePersists": true,
+  "browserErrors": []
+}

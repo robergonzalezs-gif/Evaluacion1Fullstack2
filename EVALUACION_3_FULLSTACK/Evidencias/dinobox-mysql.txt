@@ -1,0 +1,13 @@
+mysql	codigo	secuencia	estado	ubicacion
+8.0.45	DB-7B65158134FB4985	0	RECEPCION	Rancagua
+Table	Create Table
+evento_encomienda	CREATE TABLE `evento_encomienda` (
+  `codigo` varchar(20) NOT NULL,
+  `estado` enum('DESPACHO','ENTREGADO','RECEPCION','TRANSITO') NOT NULL,
+  `fecha` datetime(6) NOT NULL,
+  `ubicacion` varchar(100) NOT NULL,
+  `secuencia` int NOT NULL,
+  PRIMARY KEY (`codigo`,`secuencia`),
+  CONSTRAINT `FKpbbro62nkmo9cnpl0vglr9qdl` FOREIGN KEY (`codigo`) REFERENCES `encomienda` (`codigo`),
+  CONSTRAINT `evento_encomienda_chk_1` CHECK ((`secuencia` >= 0))
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci

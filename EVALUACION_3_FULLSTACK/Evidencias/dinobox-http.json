@@ -1,0 +1,80 @@
+{
+  "operaciones": [
+    [
+      "POST",
+      201,
+      "/api/v1/encomienda"
+    ],
+    [
+      "GET",
+      200,
+      "/api/v1/encomienda/DB-A6BDD13EA2CF45BA"
+    ],
+    [
+      "GET",
+      200,
+      "/api/v1/encomienda"
+    ],
+    [
+      "PUT",
+      200,
+      "/api/v1/encomienda/DB-A6BDD13EA2CF45BA"
+    ],
+    [
+      "PUT",
+      200,
+      "/api/v1/encomienda/DB-A6BDD13EA2CF45BA"
+    ],
+    [
+      "PUT",
+      200,
+      "/api/v1/encomienda/DB-A6BDD13EA2CF45BA"
+    ],
+    [
+      "GET",
+      200,
+      "/api/v1/encomienda/DB-A6BDD13EA2CF45BA"
+    ],
+    [
+      "GET",
+      200,
+      "/api/v1/encomienda/DB-A6BDD13EA2CF45BA"
+    ],
+    [
+      "GET",
+      200,
+      "/api/v1/encomienda"
+    ],
+    [
+      "DELETE",
+      204,
+      "/api/v1/encomienda/DB-A6BDD13EA2CF45BA"
+    ]
+  ],
+  "seguimiento": {
+    "codigo": "DB-A6BDD13EA2CF45BA",
+    "estado": "ENTREGADO",
+    "historial": [
+      {
+        "estado": "RECEPCION",
+        "fecha": "2026-11-16T22:52:09.540312Z",
+        "ubicacion": "Rancagua"
+      },
+      {
+        "estado": "DESPACHO",
+        "fecha": "2026-11-16T22:52:16.343190Z",
+        "ubicacion": "Centro de despacho Rancagua"
+      },
+      {
+        "estado": "TRANSITO",
+        "fecha": "2026-11-16T22:52:18.511612Z",
+        "ubicacion": "Santiago"
+      },
+      {
+        "estado": "ENTREGADO",
+        "fecha": "2026-11-16T22:52:20.799586Z",
+        "ubicacion": "Providencia"
+      }
+    ]
+  }
+}

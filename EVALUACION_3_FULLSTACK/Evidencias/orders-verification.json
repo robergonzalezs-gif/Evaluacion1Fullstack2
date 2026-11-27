@@ -1,0 +1,25 @@
+{
+  "frontendTests": 47,
+  "browserLimit": "El diálogo nativo de cancelación bloqueó el control del navegador integrado; cancelación y limpieza comprobadas mediante API HTTP.",
+  "date": "2026-11-23",
+  "browser": [
+    "Menú móvil abre",
+    "Compra confirmada",
+    "Carrito vacío después de compra",
+    "Stock 12 a 11",
+    "Orden recuperada tras recargar",
+    "Detalle con precio 15990"
+  ],
+  "backendTests": 17,
+  "api": [
+    "Cancelación repone stock a 12",
+    "Cancelación repetida mantiene stock 12",
+    "Eliminación de la orden temporal"
+  ],
+  "testOrderRemoved": true,
+  "database": "MySQL local, puerto 33316",
+  "builds": [
+    "Vite",
+    "Spring Boot JAR"
+  ]
+}

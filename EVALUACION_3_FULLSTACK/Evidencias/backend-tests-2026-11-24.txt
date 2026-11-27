@@ -1,0 +1,160 @@
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::staticFieldBase has been called by com.google.inject.internal.aop.HiddenClassDefiner (file:/C:/apache-maven/lib/guice-5.1.0-classes.jar)
+WARNING: Please consider reporting this to the maintainers of class com.google.inject.internal.aop.HiddenClassDefiner
+WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< cl.sanmarcos:vet-api >------------------------
+[INFO] Building Veterinaria San Marcos API 3.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ vet-api ---
+[INFO] Copying 2 resources from src\main\resources to target\classes
+[INFO] Copying 4 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ vet-api ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ vet-api ---
+[INFO] skip non existing resourceDirectory C:\Users\ALIENWARE X15 R1\Downloads\ENTREGA FINAL\Vet-Site-EP2\backend\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ vet-api ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ vet-api ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running cl.sanmarcos.vet.auth.AuthApiTest
+01:56:35.784 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [cl.sanmarcos.vet.auth.AuthApiTest]: AuthApiTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+01:56:36.041 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration cl.sanmarcos.vet.VetApplication for test class cl.sanmarcos.vet.auth.AuthApiTest
+01:56:36.139 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [cl.sanmarcos.vet.auth.AuthApiTest]: AuthApiTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+01:56:36.142 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration cl.sanmarcos.vet.VetApplication for test class cl.sanmarcos.vet.auth.AuthApiTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.2)
+
+2026-11-24T01:56:36.702-03:00  INFO 33264 --- [vet-api] [           main] cl.sanmarcos.vet.auth.AuthApiTest        : Starting AuthApiTest using Java 24.0.2 with PID 33264 (started by ALIENWARE X15 R1 in C:\Users\ALIENWARE X15 R1\Downloads\ENTREGA FINAL\Vet-Site-EP2\backend)
+2026-11-24T01:56:36.704-03:00  INFO 33264 --- [vet-api] [           main] cl.sanmarcos.vet.auth.AuthApiTest        : No active profile set, falling back to 1 default profile: "default"
+2026-11-24T01:56:37.946-03:00  INFO 33264 --- [vet-api] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-24T01:56:38.044-03:00  INFO 33264 --- [vet-api] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 78 ms. Found 7 JPA repository interfaces.
+2026-11-24T01:56:39.178-03:00  INFO 33264 --- [vet-api] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 0 (http)
+2026-11-24T01:56:39.199-03:00  INFO 33264 --- [vet-api] [           main] o.a.coyote.http11.Http11Nio2Protocol     : Initializing ProtocolHandler ["http-nio2-auto-1"]
+2026-11-24T01:56:39.202-03:00  INFO 33264 --- [vet-api] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-24T01:56:39.202-03:00  INFO 33264 --- [vet-api] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.27]
+2026-11-24T01:56:39.310-03:00  INFO 33264 --- [vet-api] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2568 ms
+2026-11-24T01:56:39.604-03:00  INFO 33264 --- [vet-api] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-11-24T01:56:39.693-03:00  INFO 33264 --- [vet-api] [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.13.Final
+2026-11-24T01:56:40.537-03:00  INFO 33264 --- [vet-api] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-24T01:56:40.588-03:00  INFO 33264 --- [vet-api] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-24T01:56:40.903-03:00  INFO 33264 --- [vet-api] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:auth_test user=DINOBOX
+2026-11-24T01:56:40.906-03:00  INFO 33264 --- [vet-api] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-24T01:56:41.027-03:00  INFO 33264 --- [vet-api] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:auth_test]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: AUTH_TEST/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-24T01:56:43.373-03:00  INFO 33264 --- [vet-api] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-24T01:56:43.529-03:00  INFO 33264 --- [vet-api] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-24T01:56:43.719-03:00  INFO 33264 --- [vet-api] [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-11-24T01:56:46.639-03:00  INFO 33264 --- [vet-api] [           main] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-11-24T01:56:47.276-03:00  INFO 33264 --- [vet-api] [           main] o.a.coyote.http11.Http11Nio2Protocol     : Starting ProtocolHandler ["http-nio2-auto-1"]
+2026-11-24T01:56:47.300-03:00  INFO 33264 --- [vet-api] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 62619 (http) with context path '/'
+2026-11-24T01:56:47.311-03:00  INFO 33264 --- [vet-api] [           main] cl.sanmarcos.vet.auth.AuthApiTest        : Started AuthApiTest in 10.925 seconds (process running for 12.488)
+2026-11-24T01:56:48.015-03:00  WARN 33264 --- [vet-api] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-11-24T01:56:48.016-03:00  WARN 33264 --- [vet-api] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+Java HotSpot(TM) 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+WARNING: A Java agent has been loaded dynamically (C:\Users\ALIENWARE X15 R1\Downloads\ENTREGA FINAL\Vet-Site-EP2\.task\m2\net\bytebuddy\byte-buddy-agent\1.18.15\byte-buddy-agent-1.18.15.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+2026-11-24T01:56:48.734-03:00  INFO 33264 --- [vet-api] [2-auto-1-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-24T01:56:48.734-03:00  INFO 33264 --- [vet-api] [2-auto-1-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-24T01:56:48.735-03:00  INFO 33264 --- [vet-api] [2-auto-1-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-11-24T01:56:51.442-03:00  WARN 33264 --- [vet-api] [2-auto-1-exec-9] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 23503, SQLState: 23503
+2026-11-24T01:56:51.442-03:00  WARN 33264 --- [vet-api] [2-auto-1-exec-9] org.hibernate.orm.jdbc.error             : Violaci?n de una restricci?n de Integridad Referencial: "FKOCIMC7DTR037RH4LS4L95NLFI: PUBLIC.ORDER_ITEMS FOREIGN KEY(PRODUCT_ID) REFERENCES PUBLIC.PRODUCTS(ID) ('d94320f2-aeef-4aa5-ac55-d15d8a986a4d')"
+Referential integrity constraint violation: "FKOCIMC7DTR037RH4LS4L95NLFI: PUBLIC.ORDER_ITEMS FOREIGN KEY(PRODUCT_ID) REFERENCES PUBLIC.PRODUCTS(ID) ('d94320f2-aeef-4aa5-ac55-d15d8a986a4d')"; SQL statement:
+delete from products where id=? [23503-240]
+[INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.61 s -- in cl.sanmarcos.vet.auth.AuthApiTest
+[INFO] Running cl.sanmarcos.vet.ProductApiTest
+2026-11-24T01:56:53.148-03:00  INFO 33264 --- [vet-api] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [cl.sanmarcos.vet.ProductApiTest]: ProductApiTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-24T01:56:53.159-03:00  INFO 33264 --- [vet-api] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration cl.sanmarcos.vet.VetApplication for test class cl.sanmarcos.vet.ProductApiTest
+2026-11-24T01:56:53.161-03:00  INFO 33264 --- [vet-api] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [cl.sanmarcos.vet.ProductApiTest]: ProductApiTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-24T01:56:53.162-03:00  INFO 33264 --- [vet-api] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration cl.sanmarcos.vet.VetApplication for test class cl.sanmarcos.vet.ProductApiTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.2)
+
+2026-11-24T01:56:53.203-03:00  INFO 33264 --- [vet-api] [           main] cl.sanmarcos.vet.ProductApiTest          : Starting ProductApiTest using Java 24.0.2 with PID 33264 (started by ALIENWARE X15 R1 in C:\Users\ALIENWARE X15 R1\Downloads\ENTREGA FINAL\Vet-Site-EP2\backend)
+2026-11-24T01:56:53.203-03:00  INFO 33264 --- [vet-api] [           main] cl.sanmarcos.vet.ProductApiTest          : No active profile set, falling back to 1 default profile: "default"
+2026-11-24T01:56:53.630-03:00  INFO 33264 --- [vet-api] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-24T01:56:53.675-03:00  INFO 33264 --- [vet-api] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39 ms. Found 7 JPA repository interfaces.
+2026-11-24T01:56:53.818-03:00  INFO 33264 --- [vet-api] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 0 (http)
+2026-11-24T01:56:53.819-03:00  INFO 33264 --- [vet-api] [           main] o.a.coyote.http11.Http11Nio2Protocol     : Initializing ProtocolHandler ["http-nio2-auto-2"]
+2026-11-24T01:56:53.819-03:00  INFO 33264 --- [vet-api] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-24T01:56:53.820-03:00  INFO 33264 --- [vet-api] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.27]
+2026-11-24T01:56:53.900-03:00  INFO 33264 --- [vet-api] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 694 ms
+2026-11-24T01:56:53.945-03:00  INFO 33264 --- [vet-api] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-11-24T01:56:53.977-03:00  INFO 33264 --- [vet-api] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-24T01:56:53.978-03:00  INFO 33264 --- [vet-api] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-11-24T01:56:53.981-03:00  INFO 33264 --- [vet-api] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:apitest user=DINOBOX
+2026-11-24T01:56:53.981-03:00  INFO 33264 --- [vet-api] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-11-24T01:56:53.982-03:00  INFO 33264 --- [vet-api] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:apitest]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: APITEST/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-24T01:56:54.117-03:00  INFO 33264 --- [vet-api] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-24T01:56:54.138-03:00  INFO 33264 --- [vet-api] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-24T01:56:54.479-03:00  INFO 33264 --- [vet-api] [           main] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-11-24T01:56:54.628-03:00  INFO 33264 --- [vet-api] [           main] o.a.coyote.http11.Http11Nio2Protocol     : Starting ProtocolHandler ["http-nio2-auto-2"]
+2026-11-24T01:56:54.630-03:00  INFO 33264 --- [vet-api] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 49682 (http) with context path '/'
+2026-11-24T01:56:54.635-03:00  INFO 33264 --- [vet-api] [           main] cl.sanmarcos.vet.ProductApiTest          : Started ProductApiTest in 1.466 seconds (process running for 19.812)
+2026-11-24T01:56:54.757-03:00  WARN 33264 --- [vet-api] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-11-24T01:56:54.757-03:00  WARN 33264 --- [vet-api] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-11-24T01:56:54.766-03:00  INFO 33264 --- [vet-api] [2-auto-2-exec-3] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-24T01:56:54.766-03:00  INFO 33264 --- [vet-api] [2-auto-2-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-24T01:56:54.768-03:00  INFO 33264 --- [vet-api] [2-auto-2-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-11-24T01:56:56.233-03:00  INFO 33264 --- [vet-api] [2-auto-2-exec-2] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 526 ms
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.164 s -- in cl.sanmarcos.vet.ProductApiTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 17, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  24.337 s
+[INFO] Finished at: 2026-11-24T01:56:56-03:00
+[INFO] ------------------------------------------------------------------------

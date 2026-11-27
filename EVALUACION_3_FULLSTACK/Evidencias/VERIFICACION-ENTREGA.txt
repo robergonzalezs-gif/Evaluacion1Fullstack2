@@ -1,0 +1,7 @@
+﻿Verificación del 25-11-2026
+Frontend: compilación correcta y 47 pruebas aprobadas.
+Backend: 17 pruebas aprobadas, cero fallos y cero errores.
+Código fuente de entrega cotejado con el proyecto actual.
+JAR verificado: incluye React y no presenta errores de integridad ZIP.
+Docker Desktop Linux no está iniciado: arranque con Compose no comprobado en esta revisión.
+Disponibilidad actual de AWS no comprobada.
